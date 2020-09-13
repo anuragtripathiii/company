@@ -12,69 +12,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <style type="text/css">
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .container-fluid{
+        .contain1{
             padding: 0;
         }
-        .img-fluid{
-            height: 100vh;
-            width: 100%;
+        .navbar{
+            padding: 5px 17px;
         }
-        .team{
-            background-image: radial-gradient(circle,#cb9c00,#594400);
-            padding: 20px 0px 30px 0px;
+        nav{
+            margin-top: 0;
         }
-        .teamhead{
-            font-size: 2.7em;
-            color: silver;
-            font-family: tahoma;
-            font-weight: normal;
+        nav img{
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            display: block;
+            margin: 5px;
+            cursor: pointer;
+            box-shadow: 0px 0px 0.5rem rgba(255,255,255,0.25);
+            transition: all 0.4s; 
         }
-        .member{
-            border-radius: 50%;
-            height: 200px;
-            width: 200px;
+        nav img:hover{
+            transform: scale(1.1,1.1);
+            box-shadow: 5px 5px 0.75rem rgba(255,255,255,0.5);
         }
-        .member2{
-            border-radius: 50%;
-            height: 180px;
-            width: 180px;
-        }
-        .txt1{
-            color: silver;
-            font-size: 1.2em;
-        }
-        .txt2{
-            color: silver;
-        }
-        .line{
-            width: 100px;
-            height: 8px;
-            background-color: silver;
-            border-radius: 50%;
-        }
-        @media screen and (max-width: 900px){
-            .img-fluid{
-                height: 80vh;
-            }
-        }
-        @media screen and (max-width: 500px){
-            .img-fluid{
-                height: 50vh;
-            }
-            .teamhead{
-                font-size: 2.4em;
+        @media screen and (max-width: 768px){
+            .navbar{
+                padding: 3px 15px;
             }
         }
     </style>
 </head>
 <body>
-<div class="container-fluid">
+    <a name="home"></a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <img src="images/logo.png">
+        <button class="navbar-toggler border ml-auto" data-toggle="collapse" data-target="#collapse_target" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item text-center">
+                <a class="links" href="#home"><i class="fas fa-home mr-1"></i>HOME</a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="links" href="#about"><i class="fas fa-user mr-1"></i>ABOUT US</a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="links" href="#team"><i class="fas fa-users mr-1"></i>TEAM</a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="links" href="#service"><i class="fas fa-cogs mr-1"></i>SERVICES</a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="links" href="#contact"><i class="fas fa-address-book mr-1"></i>CONTACT US</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    
+<div class="container-fluid contain1">
     <div id="demo3" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#demo3" data-slide-to="0" class="active"></li>
@@ -100,19 +98,20 @@
         </a>
     </div>
 </div>
-<div class="container-fluid team">
-    <div class="container">
+<a name="team"></a>
+<div class="team">
+    <div class="container" style="max-width: 995px;">
         <p class="text-center teamhead">Meet The <span class="font-weight-bold">Team</span></p>
         <center><div class="line"></div></center>
-        <div class="row mt-md-0 mt-4">
-            <div class="col-md-6">
+        <div class="row mt-5">
+            <div class="col-md-6 founder">
                 <center>
                     <img src="images/1.png" class="member d-block">
                     <strong class="d-block mt-1 txt1">Name1</strong>
                     <p class="txt2">Designation1</p>
                 </center>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-md-0 mt-5 founder">
                 <center>
                     <img src="images/1.png" class="member">
                     <strong class="d-block mt-1 txt1">Name2</strong>
@@ -120,26 +119,33 @@
                 </center>
             </div>
         </div>
-        <div class="row mt-md-0 mt-5 mb-5">
-            <div class="col-md-4">
+        <div class="row mt-lg-0 mt-5 mb-5">
+            <div class="col-lg-3 col-md-6 dev">
                 <center>
-                    <img src="images/1.png" class="member2">
-                    <strong class="d-block mt-1 txt1">Name3</strong>
-                    <p class="txt2">Designation3</p>
+                    <img src="images/1.png" class="member2 ml-lg-0 ml-md-5">
+                    <strong class="d-block mt-1 txt1 ml-lg-0 ml-md-5">Name3</strong>
+                    <p class="txt2 ml-lg-0 ml-md-5">Designation3</p>
                 </center>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-3 col-md-6 dev mt-md-0 mt-5">
                 <center>
-                    <img src="images/1.png" class="member2">
-                    <strong class="d-block mt-1 txt1">Name4</strong>
-                    <p class="txt2">Designation4</p>
+                    <img src="images/1.png" class="member2 mr-lg-0 mr-md-5">
+                    <strong class="d-block mt-1 txt1 mr-lg-0 mr-md-5">Name4</strong>
+                    <p class="txt2 mr-lg-0 mr-md-5">Designation4</p>
                 </center>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-3 col-md-6 dev mt-md-0 mt-5">
                 <center>
-                    <img src="images/1.png" class="member2">
-                    <strong class="d-block mt-1 txt1">Name5</strong>
-                    <p class="txt2">Designation5</p>
+                    <img src="images/1.png" class="member2 ml-lg-0 ml-md-5">
+                    <strong class="d-block mt-1 txt1 ml-lg-0 ml-md-5">Name5</strong>
+                    <p class="txt2 ml-lg-0 ml-md-5">Designation5</p>
+                </center>
+            </div>
+            <div class="col-lg-3 col-md-6 dev mt-md-0 mt-5">
+                <center>
+                    <img src="images/1.png" class="member2 mr-lg-0 mr-md-5">
+                    <strong class="d-block mt-1 txt1 mr-lg-0 mr-md-5">Name5</strong>
+                    <p class="txt2 mr-lg-0 mr-md-5">Designation5</p>
                 </center>
             </div>
         </div>
@@ -149,15 +155,17 @@
 
 <!--Anurag's code from here-->
 
-
+<a name="service"></a>
 <div class="anu-bg">
-    <div class="container-fluid">
+    <div class="container">
     <strong id="Services-title">Services</strong>
+     
     <p>Tag line goes here some good lines here please</p>
+    <center><div class="line"></div></center>
     <br>
         <!-- Services section -->
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-md-6">
         <div class="card card1">
             <div class="card-body">
                 <h4 class="card-title">Web</h4>
@@ -169,7 +177,7 @@
         </div>
 
 
-        <div class="col-sm-3">
+        <div class="col-md-6">
             <div class="card card1">
                 <div class="card-body">
                     <h4 class="card-title">App</h4>
@@ -180,8 +188,9 @@
             </div>
         </div>
 
-
-        <div class="col-sm-3">
+    </div>
+        <div class="row">
+        <div class="col-md-6">
             <div class="card card1">
                 <div class="card-body">
                     <h4 class="card-title">Digital marketing</h4>
@@ -194,7 +203,7 @@
 
 
 
-        <div class="col-sm-3">
+        <div class="col-md-6">
             <div class="card card1">
                 <div class="card-body">
                     <h4 class="card-title">Design</h4>
@@ -203,51 +212,44 @@
                 </div>
             </div>
         </div>
+        </div>
 
-    </div>
 </div>
 </div>
 
 <!-- About us section-->
-
-<div class="service-bg container-fluid">
+<a name="about"></a>
+<div class="service-bg">
     <h1 id="#aboutustitle">About us</h1>
+     <center><div class="line"></div></center>
     <!--This section will be completed once I get what to write here-->
 </div>
 <!--Contact us begins here-->
-<div class="bg3-contactus container-fluid">
+<a name="contact"></a>
+<div class="bg3-contactus">
     <div class="container">
         <h1 id="contact-us">
             Contact Us
         </h1>
+
+         <center><div class="line mb-5"></div></center>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><i class="fas fa-map-marker-alt"></i></h5>
                         <p class="card-text">Address goes here ...here is address example #anurag</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
+
+                        &nbsp;
                         <h5 class="card-title"><i class="fas fa-phone-square-alt"> Call Us</i></h5>
                         <p class="card-text"><i class="fas fa-phone-square-alt"></i> Developer: 8349112391 <br><i class="fas fa-phone-square-alt"></i> Manager: 8839741615 </p>
                     </div>
-                </div>
             </div>
         </div>
-
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 m-auto">
-                <div class="card mt-5">
+            <div class="col-md-6">
+                <div class="card mt-7">
                     <div class="card-title">
-                        <h2 class="text-center py-2"> Contact Us </h2>
-                        <hr>
+
                         <?php
                         $Msg = "";
                         if(isset($_GET['error']))
@@ -270,11 +272,12 @@
                             <input type="email" name="Email" placeholder="Email" class="form-control mb-2">
                             <input type="text" name="Subject" placeholder="Subject" class="form-control mb-2">
                             <textarea name="msg" class="form-control mb-2" placeholder="Write The Message"></textarea>
+                            <br>
                             <button class="btn btn-success" name="btn-send"> Send </button>
                         </form>
                     </div>
-                </div>
-            </div>
+                </div></div>
+        </div>
         </div>
     </div>
 </div>
