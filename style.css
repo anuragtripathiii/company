@@ -1,11 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-image: linear-gradient(to top, #dfe9f3 0%,white 100%);
+}
+.links{
+    display: inline-block;
+    width: 100%;
+    color: #ececec;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    transition: all 0.4s;
+}
+.links:hover{
+    transform: scale(1.1,1.1);
+    text-decoration: none;
+    background-color: #ececec;
+    color: black;
+}
+        .team{
+            margin: 80px 40px 40px 40px;
+            padding: 60px 0px 40px 0px;
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+            transition: all 0.3s;
+            background-image: linear-gradient(to bottom right, white , #fbfaf2);
+        }
+        .team:hover{
+            transform: scale(1.03,1.05);
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
+        }
+        .teamhead{
+             
+            font-size: 2.7em;
+            color: #28231d;
+            font-family: tahoma;
+            font-weight: normal;
+        }
+        .member{
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.7);
+            transition: all 0.4s ease-out;
+        }
+        .founder{
+            transition: all 0.4s ease-out;
+        }
+        .founder:hover{
+            transform: scale(1.1,1.1);
+        }
+        .founder:hover .member{
+            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.5);
+        }
+        .member2{
+            border-radius: 50%;
+            height: 180px;
+            width: 180px;
+            box-shadow: 0 0 0.75rem rgba(0,0,0,0.7);
+            transition: all 0.4s ease-out;
+        }
+        .dev{
+            transition: all 0.4s ease-out;
+        }
+        .dev:hover{
+            transform: scale(1.1,1.1);
+        }
+        .dev:hover .member2{
+            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.5);
+        }
+        .txt1{
+            color: #28231d;
+            font-size: 1.2em;
+        }
+        .txt2{
+            color: #28231d;
+        }
+        .line{
+            width: 100px;
+            height: 8px;
+            background-color: #28231d;
+            border-radius: 50%;
+        }
+        
+
 .anu-bg{
-    background: lightcyan;
+    background-image: linear-gradient(to bottom right, white , #fbfaf2);
     text-align: center;
-    padding-top: 100px;
+    padding: 60px 0px 40px 0px;
     padding-bottom: 100px;
+    margin: 80px 40px 40px 40px;
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+.anu-bg:hover{
+    transform: scale(1.03,1.05);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
 }
 #Services-title{
-    font-size: 50px;
+    font-size: 2.7em;
+    color: #28231d;
+    font-family: tahoma;
+    font-weight: normal;
 }
 .card1{
     margin: 20px;
@@ -20,7 +120,7 @@
 .card1:hover{
     box-shadow: 1px 3px 3px 0px;
     transform: scale(1.2, 1.2);
-    opacity: 1;
+    
     color: #594400;
 }
 
@@ -28,9 +128,8 @@
     animation-duration: 4s;
     font-size: 50px;
 }
-.size:hover{
-    transform:  rotate(36deg);
-    color: orange;
+.message{
+    box-shadow: 0 0 0.75rem rgba(0,0,0,0.25);
 }
 @keyframes animation1 {
 
@@ -38,7 +137,15 @@
 }
 .service-bg{
     text-align: center;
-   margin: 100px;
+    margin: 80px 40px 40px 40px;
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+    background-image: linear-gradient(to bottom right, white , #fbfaf2);
+    padding: 50px 0px;
+    transition: all 0.3s;
+}
+.service-bg:hover{
+    transform: scale(1.03,1.05);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
 }
 .img1{
     width: 300px;
@@ -49,10 +156,40 @@
 }
 
 .bg3-contactus{
-    background: darksalmon;
+    background-image: linear-gradient(to bottom right, white , #fbfaf2);
+    margin: 80px 40px;
+    padding: 60px 0px 40px 0px;
     text-align: center;
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+.bg3-contactus:hover{
+    transform: scale(1.03,1.05);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
 }
 
 #contact-us{
-    color: white;
+    font-size: 2.7em;
+    color: #28231d;
+    font-family: tahoma;
+}
+@media screen and (max-width: 500px){
+    .teamhead{
+        font-size: 2.2em;
+    }
+    .member{
+        width: 170px;
+        height: 170px;
+    }
+    .member2{
+        width: 150px;
+        height: 150px;
+    }
+    .team,.anu-bg,.service-bg{
+         margin: 60px 20px 20px 20px;
+    }
+    .bg3-contactus{
+        margin: 60px 20px;
+    }
+
 }
